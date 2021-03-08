@@ -7,7 +7,7 @@ export default class App extends Component {
     super()
     this.state = {
       listUser: ['Bùi Trung Dũng', 'Dũng Trung Bùi', 'Trung Dũng Bùi', 'Bùi Dũng Trung'],
-     
+
     }
     this.listNameFileUpload = React.createRef()
   }
@@ -45,6 +45,10 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+        <audio controls autoPlay={true} style={{ display: "none" }}>
+          <source src="/background.mp3" type="audio/mpeg" />
+        </audio>
+
         <input type="file" onInput={this.handleInputListName} ref={this.listNameFileUpload} style={{ display: "none" }} />
         <div className="container-fluid" style={{ height: "100vh" }}>
           <div className="row" style={{ background: "#faddcd" }}>
